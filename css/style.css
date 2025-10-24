@@ -1,0 +1,979 @@
+/********************** 1. Basic resets starts *******************/
+:root {
+  --primary-color: #0047ab;
+  --secondary-color: #0b2340;
+  --accent-color: #a5c8d6;
+  --text-color: #0b0b0b;
+  --bg-color: #fefefe;
+}
+
+:root {
+  --h1font-size: 3rem;
+  --h1font-weight: 700;
+  --h2font-size: 2rem;
+  --h2font-weight: 600;
+  --h3font-size: 1.5rem;
+  --h3font-weight: 500;
+  --pfont-size: 0.8;
+  --btnfont-weight: 600;
+}
+/* remove all browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* remove border from all buttons and center the text within */
+button,
+button:is(:hover, :focus-visible) {
+  line-height: 0;
+  border: 0;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/* to remove all list decoration */
+ul {
+  list-style: none;
+}
+
+/* remove all underline decorations frm the anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* makes images easier to work with */
+img,
+video,
+picture,
+svg {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/********************** 1. Basic resets ends*******************/
+
+/* header starts here */
+header {
+  padding: 1rem 2rem;
+  width: 100%;
+  /* position: fixed; */
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-nav,
+.cta-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo img {
+  width: 7rem;
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  top: 5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  width: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.cta-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  font-size: var(--text-font-size);
+  color: var(--primary-color);
+}
+
+.nav-links a.active {
+  color: var(--secondary-color);
+}
+
+.nav-links a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+
+.cta-header a {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  color: var(--bg-color);
+}
+
+.cta1 a {
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cta1 a:is(:hover, :focus-visible),
+.hero-cta1 a:is(:hover, :focus-visible),
+.cleaning-cta1 a:is(:hover, :focus-visible) {
+  background-color: var(--accent-color);
+}
+
+.cta2 a {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.cta2 a:is(:hover, :focus-visible),
+.hero-cta2 a:is(:hover, :focus-visible),
+.eco-cta1 a:is(:hover, :focus-visible),
+.why-choose-cta1 a:is(:hover, :focus-visible) {
+  background-color: #365a99;
+}
+
+/* hero section starts here */
+.hero {
+  padding: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 71, 171),
+    rgba(0, 71, 171, 0.747),
+    rgba(0, 71, 171, 0.425),
+    rgba(0, 71, 171, 0.349),
+    rgba(0, 71, 171, 0.123)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding-block: 3rem;
+}
+
+.hero-content h1 {
+  font-size: var(--h1font-size);
+  font-weight: var(--h1font-weight);
+}
+
+.cta-hero {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-hero a {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.hero-cta1 a {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--accent-color);
+}
+
+.hero-cta2 a {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+}
+
+.hero-video{
+  position: relative;
+}
+
+.hero-video video {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+.play-btn i{
+  font-size: 6rem;
+  color: white;
+}
+
+.play-btn:hover {
+  opacity: 0.8;
+}
+
+/* eco friendly section starts here */
+.eco-friendly {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.eco-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.eco-content span i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+}
+
+.eco-content h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  color: var(--secondary-color);
+}
+
+.eco-cta {
+  padding-block: 1rem;
+}
+
+.eco-cta ul,
+.cleaning-cta ul,
+.why-choose-cta ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.eco-cta1 a {
+  background-color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+}
+
+.eco-cta2 a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.eco-cta2 a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+
+/* why trust us starts here */
+.why-trust-us,
+.add-on-services {
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+.why-trust-content,
+.add-on-header {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  color: var(--secondary-color);
+  padding-block-end: 1rem;
+}
+
+.why-trust-content h2,
+.add-on-header h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+}
+
+.why-trust-rates {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-block: 1.5rem;
+  color: var(--secondary-color);
+  align-items: center;
+}
+
+.why-trust-rates span {
+  font-size: 2.5rem;
+  font-weight: var(--h1font-weight);
+  color: var(--primary-color);
+}
+
+.trust-card {
+  margin: auto;
+  padding-block: 1rem;
+}
+
+/* cleaning solutions starts here */
+.cleaning-solutions,
+.pricing-clarity {
+  background-color: var(--secondary-color);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.cleaning-solutions p {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+}
+
+.cleaning-solutions h2,
+.pricing-clarity h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  color: var(--bg-color);
+  padding-block: 0.7rem;
+}
+
+.cleaning-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  padding-block-end: 1.5rem;
+}
+
+.cleaning-cards h3 {
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+  color: var(--bg-color);
+  padding-block-start: 1rem;
+  padding-block-end: 0.5rem;
+}
+
+.cleaning-cta1 a {
+  background-color: var(--bg-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+}
+
+.cleaning-cta2 a {
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+.cleaning-cta2 a:is(:hover, :focus-visible) {
+  color: var(--accent-color);
+}
+
+/* why choose us starts here */
+.why-choose-us,
+.cleaning-process,
+.locations,
+.faqs,
+.experience {
+  background-color: var(--bg-color);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+.why-choose-us p,
+.cleaning-process p,
+.add-on-services p,
+.locations p,
+.faq-cards p,
+.experience p {
+  font-size: 0.85rem;
+}
+
+.why-choose-us h2,
+.cleaning-process h2,
+.locations h2,
+.faqs h2,
+.experience h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  color: var(--secondary-color);
+  padding-block: 0.7rem;
+}
+
+.why-choose-cards,
+.process-cards,
+.add-on-cards,
+.location-cards,
+.faq-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  padding-block-end: 1.5rem;
+}
+
+.why-choose-cards h3,
+.process-cards h3,
+.add-on-cards h3,
+.locations h3,
+.faqs h3 {
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+  color: var(--secondary-color);
+  padding-block-start: 1rem;
+  padding-block-end: 0.5rem;
+}
+
+.why-choose-cta1 a {
+  background-color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+}
+
+.why-choose-cta2 a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.why-choose-cta2 a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+
+.why-choose-us span i,
+.process-cards span i,
+.add-on-cards span i,
+.faq-cards span i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* cleaning process starts here */
+.process-cards img {
+  border-radius: 15px;
+  height: 100%;
+}
+
+/* add on services starts here*/
+.add-on-cards {
+  padding-block: 3rem;
+}
+
+/* faq section starts here */
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-questions p,
+.exp-header p {
+  padding-block-end: 2rem;
+}
+
+/* experience section starts here */
+.exp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* pricing-clarity starts here */
+.pricing-clarity {
+  text-align: unset;
+}
+
+.pricing-header {
+  text-align: center;
+}
+
+.pricing-header p {
+  color: var(--bg-color);
+  font-size: 0.85rem;
+}
+
+.pricing-btn {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  padding: 0.3rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.pricing-btn button {
+  color: var(--secondary-color);
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+}
+
+button.active {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+.price-cards {
+  display: none;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  padding-block-end: 1.5rem;
+}
+
+.price-cards.active {
+  display: grid;
+}
+
+.pricing-card {
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 8px 12px rgba(165, 200, 214, 0.356);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  color: var(--secondary-color);
+}
+
+.price-cards h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.price-cards a {
+  display: block;
+}
+
+.price-cards ul li {
+  line-height: 2rem;
+}
+
+.price-span {
+  width: 100%;
+  padding-block: 1rem;
+  border-block: 2px solid var(--accent-color);
+}
+
+.price-span span {
+  font-size: var(--h1font-size);
+  font-weight: var(--h1font-weight);
+  color: var(--primary-color);
+}
+
+.price-span a {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  text-align: center;
+  border-radius: 50px;
+}
+
+/* our clients starts here */
+
+.our-clients {
+  padding: 3rem 2rem;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.our-clients h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  padding-block-end: 1rem;
+}
+
+/* --- Flickity Carousel Container --- */
+.client-reviews {
+  /* background-color: #022047; dark blue background */
+  padding: 3rem 1rem 5rem; /* extra bottom padding for controls */
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Review Cards --- */
+.client-review {
+  border: 1px solid #00aaff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  width: 90%; /* two visible cards on large screens */
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.client-review p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- Rating Stars --- */
+.rating {
+  color: #00ff66;
+  font-size: 1.1rem;
+}
+
+/* --- Reviewer Section --- */
+.review-img {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.review-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-img span {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* --- Flickity Controls --- */
+.flickity-page-dots,
+.flickity-prev-next-button {
+  position: absolute !important;
+}
+
+/* Dots (bottom-left) */
+.flickity-page-dots {
+  bottom: 20px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  z-index: 10 !important;
+}
+
+.flickity-page-dots .dot {
+  width: 10px !important;
+  height: 10px !important;
+  background: #ccc !important;
+  opacity: 0.5 !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1 !important;
+}
+
+/* Group both arrows together at bottom-right */
+.flickity-prev-next-button {
+  display: none !important;
+  background: transparent !important;
+  border: 1px solid var(--bg-color) !important;
+  border-radius: 50% !important;
+  color: var(--bg-color) !important;
+  transform: none !important;
+  transition: all 0.3s ease !important;
+  z-index: 15 !important;
+  bottom: 0px !important;
+  top: auto !important;
+}
+
+/* Align them side-by-side */
+.flickity-prev-next-button.previous {
+  right: 75px !important;
+  margin-left: auto !important;
+}
+
+.flickity-prev-next-button.next {
+  right: 25px !important;
+}
+
+.flickity-prev-next-button:hover {
+  color: var(--primary-color) !important;
+}
+
+/* footer starts here */
+footer {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--bg-color);
+}
+
+footer a:is(:hover, :focus-visible) {
+  color: var(--primary-color);
+}
+
+.footer-content img {
+  width: 15rem;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  background-color: #a5c8d610;
+}
+
+.footer-content ul li {
+  line-height: 1.7rem;
+}
+
+.footer-contact a,
+.copyright-links a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding-block-end: 1.5rem;
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  font-size: 1.2rem;
+}
+
+.youtube a:is(:hover, :focus-visible) {
+  color: #ff0000;
+}
+
+.instagram a:is(:hover, :focus-visible) {
+  color: #e1306c;
+}
+
+.twitter a:is(:hover, :focus-visible) {
+  color: black;
+}
+
+.footer-copyright {
+  padding-block-start: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copyright-links {
+  display: flex;
+}
+
+.copyright-links li {
+  padding-inline: 0.5rem;
+}
+
+@media (min-width: 620px) {
+  .footer-content,
+  .why-trust-content,
+  .why-choose-cards,
+  .process-cards,
+  .add-on-header,
+  .add-on-cards,
+  .location-cards,
+  .faq-cards,
+  .price-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .add-on-header {
+    align-items: center;
+  }
+
+  .footer-content img {
+    margin: 0;
+  }
+
+  .eco-friendly {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .eco-image {
+    width: 70%;
+  }
+
+  .eco-cta ul {
+    justify-content: flex-start;
+  }
+
+  .why-trust-rates {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trust-card {
+    border-inline-start: 1px solid var(--secondary-color);
+    padding-inline: 1rem;
+  }
+
+  .client-review {
+    width: 56%;
+  }
+
+  .flickity-page-dots {
+    left: 25px !important;
+    display: flex !important;
+    gap: 4px !important;
+  }
+
+  .flickity-prev-next-button {
+    display: block !important;
+  }
+}
+
+@media (min-width: 870px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    inset: 0;
+    gap: 1.2rem;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    padding: 1rem 3rem;
+  }
+
+  .hero-content {
+    width: 60%;
+    margin: auto;
+  }
+
+  .eco-content h2,
+  .why-trust-content h2 {
+    width: 80%;
+  }
+
+  .cleaning-cards,
+  .why-choose-cards,
+  .faq-cards,
+  .price-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .grid-item {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .client-review {
+    width: 40%;
+    margin-right: 15px;
+  }
+
+  footer,
+  .eco-friendly,
+  .why-trust-us,
+  .cleaning-solutions,
+  .add-on-services,
+  .cleaning-process,
+  .faqs,
+  .experience,
+  .our-clients {
+    padding: 3rem;
+  }
+
+  .footer-content ul li {
+    line-height: 2rem;
+  }
+
+  .footer-content,
+  .add-on-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-copyright {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
