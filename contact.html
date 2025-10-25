@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <title>Noornest | Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-nav">
+        <a href="./index.html" class="logo">
+          <img src="./images/logo.png" alt="logo" />
+        </a>
+
+        <nav role="navigation">
+          <ul class="nav-links" role="list">
+            <li class="active" role="listitem">
+              <a href="./index.html">Home</a>
+            </li>
+
+            <li role="listitem">
+              <a href="./aboutus.html">About Us</a>
+            </li>
+
+            <li
+              role="listitem"
+              class="dropdown"
+              onclick="toggleDropdown(event)">
+              <a href="#">Services<i class="fa-solid fa-chevron-down"></i></a>
+
+              <ul role="list" class="dropdown-content">
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./services.html">Our Services</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./residential.html">Residential Cleaning</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./industrial.html">Industrial Cleaning</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./commercial.html">Commercial Cleaning</a>
+                </li>
+              </ul>
+            </li>
+            <li role="listitem">
+              <a class="active" href="./contact.html">Contact Us</a>
+            </li>
+
+            <li role="listitem">
+              <a href="./career.html">Career</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="cta-menu">
+        <ul role="list" class="cta-header">
+          <li class="cta1" role="listitem"><a href="#">Book</a></li>
+          <li class="cta2" role="listitem"><a href="#">Quote</a></li>
+        </ul>
+        <div onclick="toggleMenu()" class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <section class="experience">
+      <div class="exp-header">
+        <h2>Ready to experience clean</h2>
+        <p>
+          Book a cleaning service today and transform your space with Noornest
+          professional cleaning.
+        </p>
+        <div class="experience-cta">
+          <ul role="list" class="cta-hero">
+            <li role="listitem" class="hero-cta2"><a href="#">Book now</a></li>
+            <li role="listitem" class="hero-cta1"><a href="#">Get quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-image">
+        <img src="./images/Noornest Cleaning Services.png" alt="cleaners" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-content">
+          <img src="./images/logo2.png" alt="logo" class="footer-logo" />
+          <div class="footer-contact">
+            <p>Noornest<br />London, United Kingdom</p>
+            <br />
+            <p>Contact</p>
+            <a href="tel:+4402012345678">+44 (0)20 1234 5678</a>
+            <a href="mailto:hello@noornestcleaning.co.uk"
+              >hello@noornestcleaning.co.uk</a
+            >
+          </div>
+          <ul class="quick-links1" role="list">
+            <li role="listitem"><a href="#"> Our services</a></li>
+            <li role="listitem"><a href="#">Book cleaning</a></li>
+            <li role="listitem"><a href="#">Areas covered</a></li>
+            <li role="listitem"><a href="#">About us</a></li>
+          </ul>
+          <ul class="quick-links2" role="list">
+            <li role="listitem"><a href="#">Customer reviews</a></li>
+            <li role="listitem"><a href="#">FAQ</a></li>
+            <li role="listitem"><a href="#">Careers</a></li>
+            <li role="listitem"><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <ul class="socials" role="list">
+            <li role="listitem">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li role="listitem" class="instagram">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li role="listitem" class="twitter">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li role="listitem">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li role="listitem" class="youtube">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Noornest Cleaning Services. All rights reserved</p>
+        <ul class="copyright-links" role="list">
+          <li role="listitem"><a href="#">Privacy policy</a></li>
+          <li role="listitem"><a href="#">Terms of service</a></li>
+          <li role="listitem"><a href="#">Cookies settings</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+</html>

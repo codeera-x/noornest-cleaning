@@ -2,7 +2,9 @@
 :root {
   --primary-color: #0047ab;
   --secondary-color: #0b2340;
-  --accent-color: #a5c8d6;
+  --accent-color: #00b3c7;
+  --first-tint: #95c0c5;
+  --second-tint: #bacdd4;
   --text-color: #0b0b0b;
   --bg-color: #fefefe;
 }
@@ -66,9 +68,9 @@ svg {
 
 /* header starts here */
 header {
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   background-color: var(--bg-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
@@ -84,7 +86,7 @@ header {
 }
 
 .logo img {
-  width: 7rem;
+  width: 6rem;
 }
 
 .nav-links {
@@ -160,7 +162,7 @@ header {
 .cta1 a:is(:hover, :focus-visible),
 .hero-cta1 a:is(:hover, :focus-visible),
 .cleaning-cta1 a:is(:hover, :focus-visible) {
-  background-color: var(--accent-color);
+  background-color: var(--first-tint);
 }
 
 .cta2 a {
@@ -171,8 +173,9 @@ header {
 .cta2 a:is(:hover, :focus-visible),
 .hero-cta2 a:is(:hover, :focus-visible),
 .eco-cta1 a:is(:hover, :focus-visible),
-.why-choose-cta1 a:is(:hover, :focus-visible) {
-  background-color: #365a99;
+.why-choose-cta1 a:is(:hover, :focus-visible),
+.cleaning-cta1.scope a:is(:hover, :focus-visible) {
+  background-color: var(--secondary-color);
 }
 
 /* hero section starts here */
@@ -198,7 +201,8 @@ header {
   gap: 1.5rem;
   align-items: center;
   text-align: center;
-  padding-block: 3rem;
+  padding-block-start: 7rem;
+  padding-block-end: 3rem;
 }
 
 .hero-content h1 {
@@ -229,7 +233,7 @@ header {
   border: 1px solid var(--accent-color);
 }
 
-.hero-video{
+.hero-video {
   position: relative;
 }
 
@@ -254,7 +258,7 @@ header {
   transition: opacity 0.3s ease;
 }
 
-.play-btn i{
+.play-btn i {
   font-size: 6rem;
   color: white;
 }
@@ -316,7 +320,8 @@ header {
   font-weight: 500;
 }
 
-.eco-cta2 a:is(:hover, :focus-visible) {
+.eco-cta2 a:is(:hover, :focus-visible),
+.cleaning-cta2.scope a:is(:hover, :focus-visible) {
   color: var(--secondary-color);
 }
 
@@ -374,7 +379,7 @@ header {
 }
 
 .cleaning-solutions p {
-  color: var(--accent-color);
+  color: var(--second-tint);
   font-size: 0.85rem;
 }
 
@@ -647,7 +652,6 @@ button.active {
 
 /* --- Flickity Carousel Container --- */
 .client-reviews {
-  /* background-color: #022047; dark blue background */
   padding: 3rem 1rem 5rem; /* extra bottom padding for controls */
   border-radius: 20px;
   position: relative;
@@ -842,6 +846,207 @@ footer a:is(:hover, :focus-visible) {
   padding-inline: 0.5rem;
 }
 
+/*****************************/
+/* services page starts here */
+/*****************************/
+.hero-service {
+  position: relative;
+  padding: 2rem;
+  background-image: url(/images/cleaners\ img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+.hero-service::before {
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.3)
+  );
+  content: "";
+  position: absolute;
+}
+
+.hero-service-header {
+  position: relative;
+  color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding-block-start: 10rem;
+}
+
+.hero-service h1 {
+  font-size: var(--h1font-size);
+  font-weight: var(--h1font-weight);
+}
+
+/* cleaning solution precision starts here */
+.why-choose-us.precision {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 71, 171),
+    rgba(0, 71, 171, 0.9),
+    rgba(0, 71, 171, 0.7),
+    rgba(0, 71, 171, 0.6)
+  );
+}
+
+.why-choose-us.precision h2,
+.why-choose-us.precision h3,
+.why-choose-card.precision i {
+  color: var(--bg-color);
+}
+
+.why-choose-us.precision p {
+  color: var(--second-tint);
+}
+
+.why-choose-cta1.precision a {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+.why-choose-cta1.precision a:is(:hover, :focus-visible) {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.why-choose-cta2.precision a {
+  color: var(--bg-color);
+}
+
+.why-choose-cta2.precision a:is(:hover, :focus-visible) {
+  color: var(--first-tint);
+}
+
+/* cleaning services scope starts here */
+.cleaning-solutions.scope {
+  background-color: var(--bg-color);
+}
+
+.cleaning-solutions.scope h2,
+.cleaning-solutions.scope h3,
+.cleaning-solutions.scope p {
+  color: var(--secondary-color);
+}
+
+.cleaning-cta1.scope a {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.cleaning-cta2.scope a {
+  color: var(--primary-color);
+}
+
+/* cleaning needs starts here */
+.why-choose-us.cleaning-needs {
+  background-color: var(--secondary-color);
+}
+
+.why-choose-us.cleaning-needs h2,
+.why-choose-us.cleaning-needs h3 {
+  color: var(--bg-color);
+}
+
+.why-choose-us.cleaning-needs p,
+.why-choose-card.cleaning-needs i {
+  color: var(--second-tint);
+}
+
+/* trust section starts here */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.trust-side-header {
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
+}
+
+.trust-side-header h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+}
+
+.trust-cta ul {
+  display: flex;
+  gap: 1rem;
+  font-weight: 500;
+  padding-block-start: 2rem;
+}
+
+.trust-cta1 a {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+}
+
+.trust-cta2 a {
+  color: var(--bg-color);
+}
+
+.trust-cta2 a:is(:hover, :focus-visible) {
+  color: var(--accent-color);
+}
+
+.trust-cta1 a:is(:hover, :focus-visible) {
+  background-color: var(--first-tint);
+}
+
+.trust-side-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.trust-side-card {
+  padding-inline: 2rem;
+  margin: auto;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.trust-side-card h3 {
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+}
+
+.trust-side-card img {
+  border-radius: 15px;
+  width: 40%;
+}
+
+.trust-side-card.accent {
+  background-color: var(--accent-color);
+}
+
+.trust-side-card.tint1 {
+  background-color: var(--first-tint);
+}
+
+.trust-side-card.tint2 {
+  background-color: var(--second-tint);
+}
+
 @media (min-width: 620px) {
   .footer-content,
   .why-trust-content,
@@ -851,11 +1056,11 @@ footer a:is(:hover, :focus-visible) {
   .add-on-cards,
   .location-cards,
   .faq-cards,
-  .price-cards {
+  .price-cards, .trust {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .add-on-header {
+  .add-on-header, .process-cards{
     align-items: center;
   }
 
@@ -968,7 +1173,8 @@ footer a:is(:hover, :focus-visible) {
   }
 
   .footer-content,
-  .add-on-cards {
+  .add-on-cards,
+  .why-choose-cards.cleaning-needs {
     grid-template-columns: repeat(4, 1fr);
   }
 

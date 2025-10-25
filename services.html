@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <title>Noornest | Our Services</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-nav">
+        <a href="./index.html" class="logo">
+          <img src="./images/logo.png" alt="logo" />
+        </a>
+
+        <nav role="navigation">
+          <ul class="nav-links" role="list">
+            <li role="listitem">
+              <a href="./index.html">Home</a>
+            </li>
+
+            <li role="listitem">
+              <a href="./aboutus.html">About Us</a>
+            </li>
+
+            <li
+              role="listitem"
+              class="dropdown"
+              onclick="toggleDropdown(event)">
+              <a class="active" href="#"
+                >Services<i class="fa-solid fa-chevron-down"></i
+              ></a>
+
+              <ul role="list" class="dropdown-content">
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./services.html">Our Services</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./residential.html">Residential Cleaning</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./industrial.html">Industrial Cleaning</a>
+                </li>
+                <li class="dropdown-menu" role="listitem">
+                  <a href="./commercial.html">Commercial Cleaning</a>
+                </li>
+              </ul>
+            </li>
+            <li role="listitem">
+              <a href="./contact.html">Contact Us</a>
+            </li>
+
+            <li role="listitem">
+              <a href="./career.html">Career</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="cta-menu">
+        <ul role="list" class="cta-header">
+          <li class="cta1" role="listitem"><a href="#">Book</a></li>
+          <li class="cta2" role="listitem"><a href="#">Quote</a></li>
+        </ul>
+        <div onclick="toggleMenu()" class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-service">
+      <div class="hero-service-header">
+        <h1>Clean spaces, happy places</h1>
+        <p>
+          Professional cleaning services tailored to your home, office, and
+          industrial spaces across London and beyond
+        </p>
+      </div>
+    </section>
+
+    <section class="why-choose-us precision">
+      <div class="why-choose-heading">
+        <p>Precision</p>
+        <h2>Cleaning solutions for every environment</h2>
+        <p>
+          We tackle dirt with military precision. Our teams are trained to
+          transform spaces quickly and thoroughly.
+        </p>
+      </div>
+      <div class="why-choose-cards">
+        <div class="why-choose-card precision">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Time-saving</h3>
+          <p>Professional cleaning that frees up your valuable time</p>
+        </div>
+        <div class="why-choose-card precision">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Professional quality</h3>
+          <p>Trained experts who deliver consistent, high standard cleaning.</p>
+        </div>
+        <div class="why-choose-card precision">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Healthier environment</h3>
+          <p>Cleaning that promotes wellness and reduces allergens.</p>
+        </div>
+      </div>
+      <div class="why-choose-cta">
+        <ul role="list">
+          <li class="why-choose-cta1 precision" role="listitem">
+            <a href="#">Book</a>
+          </li>
+          <li class="why-choose-cta2 precision" role="listitem">
+            <a href="#">WhatsApp<i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cleaning-solutions scope">
+      <div class="cleaning-heading">
+        <p>Scope</p>
+        <h2>Cleaning services for every type of space</h2>
+        <p>
+          We understand that different environments require unique cleaning
+          approaches. Our services are designed to meet specific needs
+        </p>
+      </div>
+      <div class="cleaning-cards">
+        <div class="cleaning-card">
+          <img src="./images/Placeholder Image1.png" alt="cleaning" />
+          <h3>Residential cleaning</h3>
+          <p>Detailed home cleaning that brings comfort and freshness.</p>
+        </div>
+        <div class="cleaning-card">
+          <img src="./images/Placeholder Image2.png" alt="cleaning" />
+          <h3>Residential cleaning</h3>
+          <p>
+            Professional office and workplace cleaning for a pristine
+            environment.
+          </p>
+        </div>
+        <div class="cleaning-card">
+          <img src="./images/Placeholder Image3.png" alt="cleaning" />
+          <h3>Industrial cleaning</h3>
+          <p>
+            Specialized cleaning for complex industrial spaces and facilities
+          </p>
+        </div>
+      </div>
+      <div class="cleaning-cta">
+        <ul role="list">
+          <li class="cleaning-cta1 scope" role="listitem">
+            <a href="#">Services</a>
+          </li>
+          <li class="cleaning-cta2 scope" role="listitem">
+            <a href="#">Details <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="why-choose-us cleaning-needs">
+      <div class="why-choose-heading">
+        <p>Precision</p>
+        <h2>Comprehensive cleaning services for every need</h2>
+        <p>
+          We understand that every space tells a different story. Our cleaning
+          solutions are crafted to match the unique character of each
+          environment.
+        </p>
+      </div>
+      <div class="why-choose-cards cleaning-needs">
+        <div class="why-choose-card cleaning-needs">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Versatile cleaning solutions</h3>
+          <p>
+            From quick touch-ups to intensive deep cleans, we adapt to your
+            specific requirements
+          </p>
+        </div>
+        <div class="why-choose-card cleaning-needs">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Tailored cleaning approaches</h3>
+          <p>
+            Each service is designed to address the distinct challenges of
+            different spaces and surfaces.
+          </p>
+        </div>
+        <div class="why-choose-card cleaning-needs">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Efficient and thorough cleaning</h3>
+          <p>
+            Our methodical approach ensures no corner is left untouched,
+            delivering impeccable results every time.
+          </p>
+        </div>
+        <div class="why-choose-card cleaning-needs">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Specialized cleaning expertise</h3>
+          <p>
+            Trained professionals who understand the nuanced cleaning needs of
+            residential, commercial, and industrial spaces.
+          </p>
+        </div>
+      </div>
+      <div class="why-choose-cta">
+        <ul role="list">
+          <li class="why-choose-cta1 precision" role="listitem">
+            <a href="#">Explore</a>
+          </li>
+          <li class="why-choose-cta2 precision" role="listitem">
+            <a href="#">Details <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="why-choose-us">
+      <div class="why-choose-heading">
+        <p>Extra</p>
+        <h2>Additional services to enhance your clean</h2>
+        <p>
+          Go beyond basic cleaning with our targeted add-on services designed to
+          tackle those hard-toreach areas
+        </p>
+      </div>
+      <div class="why-choose-cards">
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Interior deep cleaning</h3>
+          <p>Detailed cleaning for appliances, windows, and hidden spaces.</p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Specialized treatments</h3>
+          <p>
+            Limescale removal and precision cleaning for delicate surfaces..
+          </p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-cube"></i></span>
+          <h3>Complete care package</h3>
+          <p>Comprehensive add-ons that leave no corner untouched.</p>
+        </div>
+      </div>
+      <div class="why-choose-cta">
+        <ul role="list">
+          <li class="why-choose-cta1" role="listitem">
+            <a href="#">Add-ons</a>
+          </li>
+          <li class="why-choose-cta2" role="listitem">
+            <a href="#">Options <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cleaning-process">
+      <div class="process-heading">
+        <p>Flow</p>
+        <h2>Your cleaning journey made simple</h2>
+        <p>
+          We ve refined our process to make professional cleaning effortless and
+          straightforward.
+        </p>
+      </div>
+      <div class="process-cards">
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>Tell us your needs</h3>
+          <p>Share the details of your space and when you want it cleaned</p>
+        </div>
+        <div class="why-choose-card grid-item">
+          <img src="./images/cleaners 1.jpg" alt="cleaners" />
+        </div>
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>We clean thoroughly</h3>
+          <p>
+            Our trained professionals execute a meticulous cleaning with
+            precision and care.
+          </p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-clock"></i></span>
+          <h3>Select your service</h3>
+          <p>
+            Choose the perfect cleaning package with customizable options to
+            match your requirements.
+          </p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="fa-solid fa-heart-pulse"></i></span>
+          <h3>Enjoy the result</h3>
+          <p>Relax and appreciate your transformed, sparkling clean space.</p>
+        </div>
+      </div>
+      <div class="why-choose-cta">
+        <ul role="list">
+          <li class="why-choose-cta1" role="listitem">
+            <a href="#">Start</a>
+          </li>
+          <li class="why-choose-cta2" role="listitem">
+            <a href="#">Details <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="trust-side-header">
+        <p>Trust</p>
+        <h2>Our commitment beyond clean spaces</h2>
+        <p>
+          We deliver precision cleaning with integrity. Our service goes deeper
+          than surface shine.
+        </p>
+        <div class="trust-cta">
+          <ul>
+            <li class="trust-cta1"><a href="#">Quote</a></li>
+            <li class="trust-cta2">
+              <a href="#">Details <i class="fa-solid fa-chevron-right"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="trust-side-cards">
+        <div class="trust-side-card accent">
+          <img src="./images/cleaners 2.jpg" alt="Cleaners" />
+          <h3>Professional integrity</h3>
+          <p>
+            Every cleaner undergoes rigorous background checks and comprehensive
+            training. We ensure only the most reliable professionals enter your
+            space
+          </p>
+        </div>
+        <div class="trust-side-card tint1">
+          <img src="./images/cleaners 2.jpg" alt="Cleaners" />
+          <h3>Transparent pricing</h3>
+          <p>
+            No hidden fees or surprise charges. We provide clear, upfront quotes
+            that reflect our commitment to honesty.
+          </p>
+        </div>
+        <div class="trust-side-card tint2">
+          <img src="./images/cleaners 2.jpg" alt="Cleaners" />
+          <h3>Environmental responsibility</h3>
+          <p>
+            We offer eco-friendly cleaning options that protect both your
+            environment and the planet. Our green solutions deliver powerful
+            cleaning without compromise.
+          </p>
+        </div>
+        <div class="trust-side-card tint1">
+          <img src="./images/cleaners 2.jpg" alt="Cleaners" />
+          <h3>Respectful service</h3>
+          <p>
+            We treat your property with the utmost care and respect. Our teams
+            understand that we re guests in your personal and professional
+            spaces.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="faq-header">
+        <h2>FAQs</h2>
+        <p>
+          Clear answers to help you understand our comprehensive cleaning
+          approach.
+        </p>
+      </div>
+      <div class="faq-cards">
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>What equipment do you use?</h3>
+          <p>
+            We use professional-grade tools and eco-friendly equipment designed
+            for maximum efficiency.
+          </p>
+        </div>
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>How long does a typical clean take?</h3>
+          <p>
+            Cleaning duration varies based on space size and specific
+            requirements.
+          </p>
+        </div>
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>Do you offer weekend services?</h3>
+          <p>
+            Yes, we provide flexible scheduling including weekend appointments.
+          </p>
+        </div>
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>What are your pricing options?</h3>
+          <p>
+            We offer transparent pricing with customized quotes for each unique
+            space.
+          </p>
+        </div>
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>How do you protect my property?</h3>
+          <p>
+            Our teams are fully insured and trained to handle your space with
+            utmost care.
+          </p>
+        </div>
+        <div class="faq-card">
+          <span><i class="fa-solid fa-broom"></i></span>
+          <h3>Can I customize my service?</h3>
+          <p>
+            Absolutely, we tailor our cleaning plans to meet your specific needs
+            and preferences.
+          </p>
+        </div>
+      </div>
+      <div class="faq-questions">
+        <h3>Need more clarity?</h3>
+        <p>
+          Our experts are ready to provide detailed information about our
+          services.
+        </p>
+        <div class="why-choose-cta1"><a href="#">Ask</a></div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="exp-header">
+        <h2>Your clean space starts here</h2>
+        <p>
+          Professional cleaning that transforms your environment with precision
+          and care
+        </p>
+        <div class="experience-cta">
+          <ul role="list" class="cta-hero services">
+            <li role="listitem" class="hero-cta2"><a href="#">Quote</a></li>
+            <li role="listitem" class="hero-cta1"><a href="#">Packages</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-image">
+        <img src="./images/Noornest Cleaning Services.png" alt="cleaners" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-content">
+          <img src="./images/logo2.png" alt="logo" class="footer-logo" />
+          <div class="footer-contact">
+            <p>Noornest<br />London, United Kingdom</p>
+            <br />
+            <p>Contact</p>
+            <a href="tel:+4402012345678">+44 (0)20 1234 5678</a>
+            <a href="mailto:hello@noornestcleaning.co.uk"
+              >hello@noornestcleaning.co.uk</a
+            >
+          </div>
+          <ul class="quick-links1" role="list">
+            <li role="listitem"><a href="#"> Our services</a></li>
+            <li role="listitem"><a href="#">Book cleaning</a></li>
+            <li role="listitem"><a href="#">Areas covered</a></li>
+            <li role="listitem"><a href="#">About us</a></li>
+          </ul>
+          <ul class="quick-links2" role="list">
+            <li role="listitem"><a href="#">Customer reviews</a></li>
+            <li role="listitem"><a href="#">FAQ</a></li>
+            <li role="listitem"><a href="#">Careers</a></li>
+            <li role="listitem"><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <ul class="socials" role="list">
+            <li role="listitem">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li role="listitem" class="instagram">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li role="listitem" class="twitter">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li role="listitem">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li role="listitem" class="youtube">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Noornest Cleaning Services. All rights reserved</p>
+        <ul class="copyright-links" role="list">
+          <li role="listitem"><a href="#">Privacy policy</a></li>
+          <li role="listitem"><a href="#">Terms of service</a></li>
+          <li role="listitem"><a href="#">Cookies settings</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+</html>
