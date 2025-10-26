@@ -5,6 +5,7 @@
   --accent-color: #00b3c7;
   --first-tint: #95c0c5;
   --second-tint: #bacdd4;
+  --third-tint: #d9f3f7;
   --text-color: #0b0b0b;
   --bg-color: #fefefe;
 }
@@ -69,6 +70,7 @@ svg {
 /* header starts here */
 header {
   padding: 0.5rem 2rem;
+  height: 5rem;
   width: 100%;
   position: fixed;
   background-color: var(--bg-color);
@@ -78,8 +80,7 @@ header {
   justify-content: space-between;
 }
 
-.logo-nav,
-.cta-menu {
+.logo-nav {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -124,9 +125,11 @@ header {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.cta-header {
+.cta-header,
+.cta-menu {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -269,7 +272,7 @@ header {
 
 /* eco friendly section starts here */
 .eco-friendly {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
@@ -328,7 +331,7 @@ header {
 /* why trust us starts here */
 .why-trust-us,
 .add-on-services {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-color: var(--bg-color);
 }
 
@@ -569,7 +572,7 @@ header {
   border-radius: 50px;
 }
 
-button.active {
+.pricing-btn button.active {
   background-color: var(--secondary-color);
   color: var(--bg-color);
 }
@@ -856,7 +859,7 @@ footer a:is(:hover, :focus-visible) {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 
 .hero-service::before {
@@ -972,12 +975,18 @@ footer a:is(:hover, :focus-visible) {
   padding: 8rem 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1rem;
   color: var(--bg-color);
   background-color: var(--secondary-color);
 }
 
-.trust-side-header h2 {
+.trust-side-header h2,
+.com-space-head h2,
+.workspace-cleaning h2,
+.health-safety-header h2,
+.quality-heading h2 {
   font-size: var(--h2font-size);
   font-weight: var(--h2font-weight);
 }
@@ -1008,7 +1017,8 @@ footer a:is(:hover, :focus-visible) {
   background-color: var(--first-tint);
 }
 
-.trust-side-cards {
+.trust-side-cards,
+.workspace-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
@@ -1025,7 +1035,8 @@ footer a:is(:hover, :focus-visible) {
   color: var(--secondary-color);
 }
 
-.trust-side-card h3 {
+.trust-side-card h3,
+.workspace-cleaning h3 {
   font-size: var(--h3font-size);
   font-weight: var(--h3font-weight);
 }
@@ -1047,6 +1058,332 @@ footer a:is(:hover, :focus-visible) {
   background-color: var(--second-tint);
 }
 
+/****************************************/
+/* commercial cleaning page starts here */
+/****************************************/
+
+.commercial-hero {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.commercial-hero::before {
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+  content: "";
+  position: absolute;
+}
+
+.commercial-hero-text {
+  position: relative;
+  color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding-block-start: 5rem;
+}
+
+.commercial-hero-text h1 {
+  font-size: var(--h1font-size);
+  font-weight: var(--h1font-weight);
+}
+
+.commercial-hero-text h1 span {
+  color: var(--accent-color);
+}
+
+.commercial-hero-cta ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.commercial-hero-cta li a {
+  border: 1px solid var(--accent-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 550;
+}
+
+.com-cta1 a {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.com-cta1 a:is(:hover, :focus-visible) {
+  background-color: var(--first-tint);
+}
+
+.com-cta2 a {
+  color: var(--accent-color);
+}
+
+.com-cta2 a:is(:hover, :focus-visible) {
+  color: var(--bg-color);
+}
+
+/* commercial spaces starts here */
+.commercial-spaces {
+  padding: 3rem 2rem;
+  color: var(--secondary-color);
+}
+
+.com-space-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.space-container,
+.safety-container {
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-content h2 {
+  font-size: var(--h3font-size);
+  font-weight: var(--h2font-weight);
+}
+
+.commercial-spaces img,
+.bottom-right-card img,
+.top-safety-card img {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.left-container,
+.mini-containers,
+.top-safety-card,
+.b-card,
+.bottom-right-card,
+.top-right-card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.mini-content {
+  padding: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.mini-content h3 {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.mini-cta a {
+  font-weight: 550;
+  color: var(--primary-color);
+}
+
+.mini-cta a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+
+/* Workspace Cleaning starts here */
+.workspace-cleaning {
+  padding: 3rem 2rem;
+  background-color: var(--third-tint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.workspace-cards {
+  padding-block: 3rem;
+  gap: 2rem;
+}
+
+.workspace-card,
+.workspace-heading,
+.health-safety-header,
+.b-card,
+.t-card,
+.quality-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.workspace-cards img {
+  border-radius: 20px;
+}
+
+/* flexible cleaning solutions starts here */
+.workspace-cleaning.flexible {
+  background-color: var(--bg-color);
+}
+
+.workspace-card.flexible i {
+  font-size: 3rem;
+}
+
+/* health and safety starts here */
+.health-safety {
+  padding: 3rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+.health-safety-header,
+.quality-heading {
+  align-items: center;
+  text-align: center;
+}
+
+.left-safety-cards,
+.right-safety-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bottom-safety-card {
+  display: flex;
+  gap: 2rem;
+}
+
+.b-card,
+.t-card {
+  padding: 2rem;
+}
+
+.b-icon i {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.b-card h3,
+.t-card h3 {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.top-right-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.top-right-card img {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+/* elevate your workspace starts here */
+.add-on-services.elevate {
+  background-color: var(--third-tint);
+}
+
+/* quality assurance starts here */
+.quality-assurance {
+  padding: 3rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+.quality-nav {
+  padding-block: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.quality-card {
+  display: none;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.quality-card.active{
+   display: grid;
+}
+
+.quality-nav button {
+  padding-bottom: 1rem;
+  background-color: var(--bg-color);
+}
+
+.quality-nav button.active {
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* cleaning journey starts here */
+.cleaning-process.journey{
+  background-color: var(--third-tint);
+}
+/* cleaning costs starts here */
+.cost-card{
+  background-color: var(--third-tint);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 20px;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.cost-span{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--secondary-color);
+  padding-block-end: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.cost-span .cost{
+  font-size: 2.5rem;
+}
+
+.cost-span .cost-icon{
+  font-size: 1.7rem;
+}
+
+.cost-cta a{
+ background-color: var(--primary-color);
+ color: var(--bg-color);
+ border-radius: 50px;
+ padding: 0.5rem 1.5rem;
+}
+/* service areas starts here */
+.mini-cta.areas{
+  padding-block-start: 1rem;
+}
+/* faqs starts here */
+.faqs.commercial{
+  background-color: var(--third-tint);
+}
+
+/* media query starts here */
 @media (min-width: 620px) {
   .footer-content,
   .why-trust-content,
@@ -1056,11 +1393,20 @@ footer a:is(:hover, :focus-visible) {
   .add-on-cards,
   .location-cards,
   .faq-cards,
-  .price-cards, .trust {
+  .price-cards,
+  .trust,
+  .workspace-cards,
+  .quality-card {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .add-on-header, .process-cards{
+  .cta-header,
+  .cta-menu {
+    gap: 1.5rem;
+  }
+
+  .add-on-header,
+  .process-cards {
     align-items: center;
   }
 
@@ -1103,6 +1449,28 @@ footer a:is(:hover, :focus-visible) {
   .flickity-prev-next-button {
     display: block !important;
   }
+
+  .trust-side-header {
+    align-items: flex-start;
+    text-align: unset;
+  }
+
+  .commercial-hero,
+  .hero-service {
+    top: 5rem;
+    height: 80vh;
+  }
+
+  .commercial-spaces,
+  .why-choose-us.precision {
+    margin-block-start: 5rem;
+  }
+
+  .right-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 870px) {
@@ -1130,7 +1498,8 @@ footer a:is(:hover, :focus-visible) {
   }
 
   .eco-content h2,
-  .why-trust-content h2 {
+  .why-trust-content h2,
+  .workspace-heading {
     width: 80%;
   }
 
@@ -1174,12 +1543,18 @@ footer a:is(:hover, :focus-visible) {
 
   .footer-content,
   .add-on-cards,
-  .why-choose-cards.cleaning-needs {
+  .why-choose-cards.cleaning-needs,
+  .workspace-cards {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .footer-copyright {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .space-container,
+  .safety-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
