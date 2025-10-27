@@ -87,3 +87,62 @@ const qualityTab = () => {
 
 qualityTab();
 
+const servicesTab = () => {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach((section) => {
+    const serviceBtns = section.querySelectorAll(".sectionsBtn");
+    const serviceCards = section.querySelectorAll(".section-img");
+
+    // Only run if the section actually contains tab content
+    if (serviceBtns.length && serviceCards.length) {
+      serviceBtns.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active states within this section only
+          serviceBtns.forEach((btn) => btn.classList.remove("active"));
+          serviceCards.forEach((card) => card.classList.remove("active"));
+
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          // Match image ID within the same section
+          const btnId = button.id; // e.g., "firstBtn"
+          const cardId = btnId.replace("Btn", "Img"); // → "firstImg"
+          const activeCard = section.querySelector(`#${cardId}`);
+
+          if (activeCard) {
+            activeCard.classList.add("active");
+          }
+        });
+      });
+    }
+  });
+};
+
+servicesTab();
+
+
+  document.querySelectorAll(".protocol-container").forEach((container) => {
+    const buttons = container.querySelectorAll(".protocolBtn");
+    const cards = container.querySelectorAll(".protocol-card");
+
+    buttons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        // Remove active state only within this section
+        buttons.forEach((b) => b.classList.remove("active"));
+        cards.forEach((c) => c.classList.remove("active"));
+
+        // Activate the clicked button and its matching card
+        btn.classList.add("active");
+        cards[index].classList.add("active");
+      });
+    });
+
+    // Default active state for each section
+    if (buttons.length > 0 && cards.length > 0) {
+      buttons[0].classList.add("active");
+      cards[0].classList.add("active");
+    }
+  });
+
+

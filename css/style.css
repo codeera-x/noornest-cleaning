@@ -3,9 +3,14 @@
   --primary-color: #0047ab;
   --secondary-color: #0b2340;
   --accent-color: #00b3c7;
-  --first-tint: #95c0c5;
-  --second-tint: #bacdd4;
-  --third-tint: #d9f3f7;
+  --first-tint: #99e1e9;
+  --second-tint: #b2e8ee;
+  --third-tint: #ccf0f4;
+  --fourth-tint: #e6f7f9;
+  --shade-one: #99b5dd;
+  --shade-two: #b2c8e6;
+  --shade-three: #ccdaee;
+  --shade-four: #e6edf7;
   --text-color: #0b0b0b;
   --bg-color: #fefefe;
 }
@@ -119,10 +124,15 @@ header {
   display: none;
   position: absolute;
   width: 300px;
+  left: -6rem;
   background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu {
+  padding-block: 0.5rem;
 }
 
 .cta-header,
@@ -179,6 +189,10 @@ header {
 .why-choose-cta1 a:is(:hover, :focus-visible),
 .cleaning-cta1.scope a:is(:hover, :focus-visible) {
   background-color: var(--secondary-color);
+}
+
+.dropdown-menu a:is(:hover, :focus-visible) {
+  color: var(--shade-one);
 }
 
 /* hero section starts here */
@@ -521,6 +535,7 @@ header {
 /* add on services starts here*/
 .add-on-cards {
   padding-block: 3rem;
+  text-align: center;
 }
 
 /* faq section starts here */
@@ -1185,6 +1200,13 @@ footer a:is(:hover, :focus-visible) {
   border-radius: 20px;
 }
 
+.mini-containers,
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mini-content {
   padding: 2rem;
   display: flex;
@@ -1322,8 +1344,8 @@ footer a:is(:hover, :focus-visible) {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.quality-card.active{
-   display: grid;
+.quality-card.active {
+  display: grid;
 }
 
 .quality-nav button {
@@ -1337,11 +1359,11 @@ footer a:is(:hover, :focus-visible) {
 }
 
 /* cleaning journey starts here */
-.cleaning-process.journey{
+.cleaning-process.journey {
   background-color: var(--third-tint);
 }
 /* cleaning costs starts here */
-.cost-card{
+.cost-card {
   background-color: var(--third-tint);
   display: flex;
   flex-direction: column;
@@ -1351,7 +1373,7 @@ footer a:is(:hover, :focus-visible) {
   justify-content: space-between;
 }
 
-.cost-span{
+.cost-span {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1360,27 +1382,493 @@ footer a:is(:hover, :focus-visible) {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-.cost-span .cost{
+.cost-span .cost {
   font-size: 2.5rem;
 }
 
-.cost-span .cost-icon{
+.cost-span .cost-icon {
   font-size: 1.7rem;
 }
 
-.cost-cta a{
- background-color: var(--primary-color);
- color: var(--bg-color);
- border-radius: 50px;
- padding: 0.5rem 1.5rem;
+.cost-cta a {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
 }
 /* service areas starts here */
-.mini-cta.areas{
+.mini-cta.areas {
   padding-block-start: 1rem;
 }
 /* faqs starts here */
-.faqs.commercial{
+.faqs.commercial {
   background-color: var(--third-tint);
+}
+
+/********************************/
+/* residential page starts here */
+/********************************/
+
+.com-cta1.residential a {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--bg-color);
+}
+
+.com-cta1.residential a:is(:hover, :focus-visible) {
+  background-color: var(--first-tint);
+}
+
+.com-cta2.residential a {
+  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+}
+
+.com-cta2.residential a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+
+/* home cleaning starts here */
+.home-cleaning {
+  padding: 3rem 2rem;
+  margin-block-start: 5rem;
+}
+
+.home-cleaning .card-content {
+  padding: 0;
+}
+
+.home-cleaning .quality-card {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+
+.who-benefits .workspace-card span {
+  color: var(--primary-color);
+}
+
+.add-on-services.clean {
+  background-color: var(--secondary-color);
+  color: var(--third-tint);
+}
+
+.clean .add-on-cards h3,
+.clean .add-on-cards span i {
+  color: var(--bg-color);
+}
+
+.clean .add-on-header {
+  display: block;
+  color: var(--bg-color);
+}
+
+.clean .add-on-header p {
+  color: var(--third-tint);
+}
+
+.eco-cta1.clean a {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+.eco-cta1.clean a:is(:hover, :focus-visible) {
+  background-color: var(--first-tint);
+}
+
+.eco-cta2.clean a {
+  color: var(--accent-color);
+}
+
+.eco-cta2.clean a:is(:hover, :focus-visible) {
+  color: var(--secondary-color);
+}
+/* kitchen services starts here */
+.kitchen,
+.bathroom,
+.bedroom,
+.extra {
+  padding: 3rem 2rem;
+  color: var(--secondary-color);
+}
+
+.bathroom {
+  background-color: var(--third-tint);
+}
+
+.section-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  row-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.section-img {
+  padding-block: 2rem;
+  display: none;
+}
+
+.section-img img {
+  border-radius: 20px;
+}
+
+.section-img.active {
+  display: block;
+}
+
+.section-nav div button {
+  color: var(--secondary-color);
+  padding-block: 1rem;
+  background-color: var(--bg-color);
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.bathroom .section-nav button {
+  background-color: var(--third-tint);
+}
+
+.section-nav .active {
+  border-top: 2px solid var(--primary-color);
+}
+
+.bedroom-nav {
+  padding-block: 2.5rem;
+}
+
+.cleaning-plans .workspace-card span,
+.perfect-clean .workspace-card span {
+  color: var(--primary-color);
+}
+/********************************/
+/* industrial page starts here */
+/********************************/
+.trust-side-card.shade4 {
+  background-color: var(--shade-four);
+}
+
+.trust-side-card.shade3 {
+  background-color: var(--shade-three);
+}
+
+.trust-side-card.shade2 {
+  background-color: var(--shade-two);
+}
+
+.trust-side-card.shade1 {
+  background-color: var(--shade-one);
+}
+
+.trust-side-card.tint3 {
+  background-color: var(--third-tint);
+}
+
+.trust-side-card.tint4 {
+  background-color: var(--fourth-tint);
+}
+
+.trust-side-header.primary {
+  background-color: var(--primary-color);
+}
+/* cleaning-limitations starts here */
+.cleaning-limitations,
+.cleaning-protocols {
+  padding: 3rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.limitation-head,
+.protocol-head {
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-block-end: 2rem;
+}
+
+.limitation-head h2,
+.protocol-head h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+}
+
+.limitation-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.limitation-card {
+  background: url(/images/client\ img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--bg-color);
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.limitation-card h3 {
+  font-size: var(--h3font-size);
+  font-weight: 550;
+}
+
+.limit-cta a {
+  color: white;
+}
+
+.limit-cta a:is(:hover, :focus-visible) {
+  color: var(--accent-color);
+}
+
+/* cleaning-protocols */
+.protocol-head {
+  gap: 1rem;
+}
+
+.protocol-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Button Section */
+.protocol-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  background-color: var(--accent-color);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.protocolBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #001f3f;
+  padding: 2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.protocolBtn:hover,
+.protocolBtn.active {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Content Section */
+.protocol-content {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+}
+
+.protocol-card {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+}
+
+.protocol-card.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.protocol-card img {
+  width: 80%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.protocol-card .card-content {
+  flex: 1;
+}
+
+.protocol-card .card-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.protocol-card .eco-cta ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.protocol-card .eco-cta1 a {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.protocol-card .eco-cta1 a:is(:hover, :focus-visible) {
+  background-color: var(--bg-color);
+}
+
+.protocol-card .eco-cta2 a {
+  color: var(--bg-color);
+}
+
+.protocol-card .eco-cta2 a:is(:hover, :focus-visible) {
+  color: var(--accent-color);
+}
+
+.pricing-clarity.flexible,
+.pricing-clarity.flexible .cost-cta a {
+  background-color: var(--bg-color);
+}
+
+.pricing-clarity.flexible h2,
+.pricing-clarity.flexible p,
+.pricing-clarity.flexible .cost-cta a {
+  color: var(--secondary-color);
+}
+
+.pricing-clarity.flexible .pricing-btn,
+.pricing-clarity.flexible .cost-card {
+  background-color: var(--secondary-color);
+}
+
+.pricing-clarity.flexible .pricing-btn button {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+.pricing-clarity.flexible .pricing-btn button.active {
+  background-color: var(--second-tint);
+  color: var(--secondary-color);
+}
+
+.pricing-clarity.flexible .price-cards h4,
+.pricing-clarity.flexible .cost-span,
+.pricing-clarity.flexible ul {
+  color: var(--bg-color);
+}
+
+.pricing-clarity.flexible .cost-span {
+  border-bottom: 2px solid var(--second-tint);
+}
+
+.pricing-clarity .cost-cta a {
+  text-align: center;
+}
+
+.locations.regional,
+.experience.industrial {
+  background-color: var(--third-tint);
+}
+
+.experience img {
+  border-radius: 20px;
+}
+
+/********************************/
+/* career page starts here */
+/********************************/
+.quality-assurance.we-are-hiring,
+.quality-assurance.we-are-hiring button {
+  background-color: var(--third-tint);
+}
+
+.what-we-do {
+  padding: 3rem 2rem;
+}
+
+.what-we-do-head {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-color);
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  padding-block-end: 2rem;
+}
+
+.what-we-do-head h2 {
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+}
+
+.what-we-do img, .career-growth img{
+  border-radius: 20px;
+}
+
+.career-growth {
+  color: var(--secondary-color);
+  padding: 3rem 2rem;
+  background-color: var(--third-tint);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.growth-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.growth-content div{
+  display: flex;
+  gap: 1rem;
+}
+
+.growth-content .career-icon{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.growth-content h3{
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.training{
+  padding: 3rem 2rem 0 2rem;
+  background-color: var(--secondary-color);
+}
+
+.training .what-we-do-head{
+  color: var(--bg-color);
+}
+
+.training .eco-cta1 a{
+  background-color: var(--accent-color);
+}
+
+.training .eco-cta1 a:is(:hover, :focus-visible){
+  background-color: var(--primary-color);
+}
+
+.training .eco-cta2 a{
+  color: var(--accent-color);
+}
+
+.training .eco-cta2 a:is(:hover, :focus-visible){
+  color: var(--primary-color);
+}
+
+.locations.areas{
+  background-color: var(--third-tint);
+}
+
+.how-to-apply{
+  padding: 3rem 2rem;
+}
+
+.how-to-apply h2{
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  padding-block-end: 1rem;
 }
 
 /* media query starts here */
@@ -1396,7 +1884,11 @@ footer a:is(:hover, :focus-visible) {
   .price-cards,
   .trust,
   .workspace-cards,
-  .quality-card {
+  .quality-card,
+  .home-cleaning .quality-card,
+  .limitation-cards,
+  .protocol-btns,
+  .career-growth {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1414,13 +1906,23 @@ footer a:is(:hover, :focus-visible) {
     margin: 0;
   }
 
-  .eco-friendly {
+  .protocol-card img {
+    width: 45%;
+  }
+
+  .eco-friendly,
+  .protocol-card.active {
     flex-direction: row;
     align-items: center;
   }
 
-  .eco-image {
+  .eco-image,
+  .clean .add-on-header {
     width: 70%;
+  }
+
+  .add-on-cards {
+    text-align: unset;
   }
 
   .eco-cta ul {
@@ -1506,7 +2008,8 @@ footer a:is(:hover, :focus-visible) {
   .cleaning-cards,
   .why-choose-cards,
   .faq-cards,
-  .price-cards {
+  .price-cards,
+  .limitation-cards {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1553,8 +2056,25 @@ footer a:is(:hover, :focus-visible) {
     justify-content: space-between;
   }
 
+  .section-nav {
+    flex-direction: row;
+  }
+
+  .section-nav div button {
+    width: 100%;
+  }
+
+  .section-img {
+    margin: auto;
+    width: 70%;
+  }
+
   .space-container,
   .safety-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .protocol-btns {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
