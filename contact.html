@@ -91,7 +91,7 @@
     </section>
 
     <section class="contact-us">
-      <div>
+      <div class="contact-container">
         <div class="contact-us-heading">
           <p>Connect</p>
           <h2>Contact us</h2>
@@ -101,22 +101,28 @@
           </p>
         </div>
         <div class="contact-link">
-          <div>
-            <span></span>
-            <h3>Email</h3>
-            <a href="mailto:hello@noornestcleaning.co.uk"
-              >hello@noornestcleaning.co.uk</a
+          <div class="contact-div">
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <span
+              ><h3>Email</h3>
+              <a href="mailto:hello@noornestcleaning.co.uk"
+                >hello@noornestcleaning.co.uk</a
+              ></span
             >
           </div>
-          <div>
-            <span></span>
-            <h3>Phone</h3>
-            <a href="tel:+44 (0)XXXX XXX XXX">+44 (0)XXXX XXX XXX</a>
+          <div class="contact-div">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <span
+              ><h3>Phone</h3>
+              <a href="tel:+44 (0)XXXX XXX XXX">+44 (0)XXXX XXX XXX</a></span
+            >
           </div>
-          <div>
-            <span></span>
-            <h3>Hours</h3>
-            <p>Monday to Saturday, 08:00-18:00</p>
+          <div class="contact-div">
+            <span><i class="fa-solid fa-clock"></i></span>
+            <span
+              ><h3>Hours</h3>
+              <p>Monday to Saturday, 08:00-18:00</p></span
+            >
           </div>
         </div>
       </div>
@@ -124,7 +130,29 @@
     </section>
 
     <section class="send-details">
-      <div class="request"></div>
+      <div class="request">
+        <p>Request</p>
+        <h2>Send us your details</h2>
+        <p>Fill out the form below and we'll get back to you quickly</p>
+        <ul class="contact-link">
+          <li>
+            <a href="mailto:email@example.com"
+              ><i class="fa-solid fa-envelope"></i>email@example.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+1(555)0000000"
+              ><i class="fa-solid fa-phone"></i>+1 (555) 000-0000</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-location-dot"></i> 123 Sample St, Sydney
+              NSW 2000 AU</a
+            >
+          </li>
+        </ul>
+      </div>
       <form>
         <span class="input-span">
           <label for="firstName"
@@ -158,8 +186,8 @@
           </select>
         </label>
 
-        <p class="radio-label">What describes your cleaning needs?</p>
         <span class="radio-span">
+          <p class="radio-label">What describes your cleaning needs?</p>
           <label for="homeCleaning">
             <input type="radio" name="cleaning-needs" id="homeCleaning" />Home
             cleaning</label
@@ -184,8 +212,8 @@
               name="cleaning-needs"
               id="commercialSpace" />Commercial space
           </label>
-          <label for="other">
-            <input type="radio" name="cleaning-needs" id="other" />
+          <label for="other"> 
+            <input type="radio" name="cleaning-needs" id="other" />Other
           </label>
         </span>
 
