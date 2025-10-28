@@ -135,19 +135,19 @@
         <h2>Send us your details</h2>
         <p>Fill out the form below and we'll get back to you quickly</p>
         <ul class="contact-link">
-          <li>
+          <li><i class="fa-solid fa-envelope"></i>
             <a href="mailto:email@example.com"
-              ><i class="fa-solid fa-envelope"></i>email@example.com</a
+              >email@example.com</a
             >
           </li>
-          <li>
+          <li><i class="fa-solid fa-phone"></i>
             <a href="tel:+1(555)0000000"
-              ><i class="fa-solid fa-phone"></i>+1 (555) 000-0000</a
+              >+1 (555) 000-0000</a
             >
           </li>
-          <li>
+          <li><i class="fa-solid fa-location-dot"></i> 
             <a href="#"
-              ><i class="fa-solid fa-location-dot"></i> 123 Sample St, Sydney
+              >123 Sample St, Sydney
               NSW 2000 AU</a
             >
           </li>
@@ -179,7 +179,7 @@
         <label for="service"
           >Select service type
           <select name="service" id="service" class="contact-box">
-            <option disabled>select one...</option>
+            <option>select one...</option>
             <option value="Commercial cleaning">Commercial cleaning</option>
             <option value="Industrial cleaning">Industrial cleaning</option>
             <option value="Residential cleaning">Residential cleaning</option>
@@ -188,6 +188,7 @@
 
         <span class="radio-span">
           <p class="radio-label">What describes your cleaning needs?</p>
+          <span>
           <label for="homeCleaning">
             <input type="radio" name="cleaning-needs" id="homeCleaning" />Home
             cleaning</label
@@ -215,9 +216,11 @@
           <label for="other"> 
             <input type="radio" name="cleaning-needs" id="other" />Other
           </label>
+          </span>
         </span>
 
         <label for="message">
+          Message
           <textarea name="message" id="message">
             Tell us about your cleaning requirements
         </textarea
@@ -229,7 +232,9 @@
           accept the terms and conditions
         </label>
 
-        <button id="submitBtn" type="submit">Submit</button>
+       <div class="submit">
+         <button id="submitBtn" type="submit">Submit</button>
+       </div>
       </form>
     </section>
 
@@ -241,8 +246,8 @@
           WhatsApp.
         </p>
         <ul role="list" class="whatsapp-cta">
-          <li role="listitem"><a href="#">WhatsApp</a></li>
-          <li role="listitem">
+          <li class="whatsapp-cta1" role="listitem"><a href="#">WhatsApp</a></li>
+          <li class="whatsapp-cta2" role="listitem">
             <a href="#">Message<i class="fa-solid fa-chevron-right"></i></a>
           </li>
         </ul>
